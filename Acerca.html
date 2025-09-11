@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Práctica 7 — Introducción a CSS</title>
+  <title>Acerca de — Práctica 7</title>
   <style>
     /* Paso 5: Configuración general del sitio - línea #1 */
     *{
@@ -26,15 +26,16 @@
     /* Paso 6: Quitar puntos de viñeta de la lista del menú */
     ul {
       list-style: none;
-     
+      padding: 0;
+      margin: 0;
     }
 
     /* Paso 7: Formato para las opciones de la lista */
     ul li {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Tipo de letra*/
       font-size: 22px; /*tamaño de letra*/
-      height: 60px; /*altura automática para ajustarse al contenido*/
-     
+      height: auto; /*altura automática para ajustarse al contenido*/
+      margin-bottom: 5px; /* Espaciado entre elementos */
     }
 
     /* Paso 8: Configuración de los enlaces del menú */
@@ -42,19 +43,19 @@
       height: 60px; /*altura*/
       background-color: #333; /* color de fondo*/
       display: block;
-      border-left: 10px solid rgb(8,96,179);
+      border-left: 5px solid rgb(8,96,179);
       border-right: 5px solid rgb(144, 253, 111);
       padding-left: 15px; /*separación izquierda del texto */
       text-decoration: none;
       color: #bfeifi;
-      
+      line-height: 60px; /* Para centrar verticalmente el texto */
     }
 
     /* Paso 9: Animación hover para los botones del menú */
     ul li a:hover {
       margin-left: 10px; /*separacion del lado izquierdo*/
       color: #b9b7b7; /*color de letra*/
-      background-color: #0b1741; /*color de fondo*/
+      background-color: #cb1741; /*color de fondo*/
       box-shadow: 10px 10px 20px #000; /*sombra*/
       transform: rotate(4deg); /*movimiento de rotación*/
       -moz-transform: rotate(4deg);
@@ -138,13 +139,23 @@
       margin: 0;
       padding: 15px;
     }
+
+    /* Estilo específico para la página Acerca de */
+    .acerca-highlight {
+      background-color: #9b59b6;
+      color: white;
+    }
+
+    .acerca-highlight:hover {
+      background-color: #8e44ad !important;
+    }
   </style>
 </head>
 <body>
   <table class="layout" border="0">
     <tr class="header">
       <td colspan="2">
-        <img src="imagenes/HTML5_Logo.png" alt="Banner del sitio" class="banner" style="width: 100%; height: 150px; object-fit: cover; background: linear-gradient(45deg, #ff6b6b, #4ecdc4);" />
+        <img src="imagenes/HTML5_Logo.png" alt="Banner del sitio" class="banner" style="width: 100%; height: 150px; object-fit: cover; background: linear-gradient(45deg, #9b59b6, #8e44ad);" />
       </td>
     </tr>
 
@@ -155,41 +166,19 @@
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="Frontend.html">Frontend</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="Acerca.html" class="acerca-highlight">Acerca de</a></li>
           </ul>
         </nav>
       </td>
 
       <td class="content">
-        <div id="html" class="seccion">
-          <h2>¿Qué es HTML5?</h2>
+        <div id="acerca" class="seccion">
+          <h2>ACERCA DE</h2>
           <div class="card">
-            <img src="imagenes/HTML5_Logo.png" alt="Logo de HTML5" />
+            <img src="imagenes/student_logo.png" alt="Estudiante" style="background: linear-gradient(45deg, #9b59b6, #8e44ad); border-radius: 50%;" />
             <p>
-              HTML5 es el lenguaje para estructurar el contenido de las páginas web. 
-              Proporciona etiquetas semánticas y soporte para multimedia y gráficos.
-            </p>
-          </div>
-        </div>
-
-        <div id="css" class="seccion">
-          <h2>¿Qué es CSS?</h2>
-          <div class="card">
-            <img src="CSS_Logo.png" alt="Logo de CSS" />
-            <p>
-              CSS define la apariencia del contenido HTML: colores, fuentes, 
-              tamaños, márgenes y diseño visual del sitio.
-            </p>
-          </div>
-        </div>
-
-        <div id="js" class="seccion">
-          <h2>¿Qué es Java?</h2>
-          <div class="card">
-            <img src="imagenes/java_logo.png" alt="Logo de Java" />
-            <p>
-              Java es un lenguaje de programación versátil que se utiliza para 
-              aplicaciones web, móviles y de escritorio, con gran portabilidad.
+              <strong>Carrera:</strong> Licenciatura en Sistemas Computacionales<br>
+              <strong>Semestre:</strong> 2020, Número del alumno
             </p>
           </div>
         </div>
